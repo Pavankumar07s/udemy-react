@@ -43,4 +43,4 @@ To get started with **Project Title**, follow these steps:
 After installing, you can use the application by [instructions on how to use the application]. For example:
 
 ```sh
-node app.js
+npm run dev
