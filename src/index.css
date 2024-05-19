@@ -16,7 +16,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  min-height: 80rem;
+  /* min-height: 90rem; */
 }
 
 
@@ -126,7 +126,7 @@ main h2 {
   border-radius: 6px;
   background-color: #2f1d43;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border: 2px solid red;
+  border: 2px solid rgb(135, 35, 181);
 }
 
 #tab-content h3 {
