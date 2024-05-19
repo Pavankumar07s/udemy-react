@@ -1,35 +1,8 @@
-import Reactimage from "./assets/state-mgmt.png"
-import ComponentImg from "./assets/config.png"
-import { CORE_CONCEPTS } from "./data"
-const arrayForDiscription=["hiii","hello","holla"]
-const getRandomIndex=(max)=>{
-  return Math.floor(Math.random()*(max+1))
-}
+import ComponentImg from "./assets/config.png";
+import { CORE_CONCEPTS } from "./data";
 
-function Header(){
-  let discription =arrayForDiscription[getRandomIndex(2)]
-  return(
-    <header>
-      <img src={Reactimage} alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {discription} React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-    
-  )
-}
-
-const CoreConcept=({image,title,description})=>{
-    return(
-      <li>
-        <img src={image} alt="..." />
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </li>
-    )
-}
+import Header from "./components/Header"
+import CoreConcept from "./components/Coreconcept"
 
 function App() {
   return (
