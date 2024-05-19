@@ -16,7 +16,7 @@
 ## Introduction
 Welcome to React Essential This project aims to provide basic concept to start the React. It provides [key functionality/benefits].
 
-![Screenshot](path/to/screenshot.png)
+![Screenshot](src/assets/react-Homepage.png)
 
 ## Features
 - Feature 1: Description of feature 1
