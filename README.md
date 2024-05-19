@@ -30,7 +30,6 @@ To get started with **Project Title**, follow these steps:
     ```sh
     git clone https://github.com/Pavankumar07s/udemy-react.git
     ```
-    ```
 2. Install dependencies:
     ```sh
     npm install
