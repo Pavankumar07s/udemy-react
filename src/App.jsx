@@ -1,15 +1,15 @@
 import { useState } from "react";
 import ComponentImg from "./assets/config.png";
 import { CORE_CONCEPTS } from "./data";
-
+import { EXAMPLES } from "./data";
 import Header from "./components/Header"
 import CoreConcept from "./components/Coreconcept"
 import TabButton from "./components/TabButton";
 
 
 function App() {
-  const [selectedTopic,setselectedTopic]=useState("select any button from above");
-  let tabContent="plese select the above button"
+  const [selectedTopic,setselectedTopic]=useState();
+  // let tabContent="plese select the above button"
   function hendleSelect(selectedButton){
     console.log(selectedButton)
     // tabContent=selectedButton;
@@ -32,13 +32,27 @@ function App() {
       <section id="examples">
       <h2>Examples</h2>
       <menu>
-          <TabButton onSelect={()=>hendleSelect('components')}>Componets</TabButton>
-          <TabButton onSelect={()=>hendleSelect("Jsx")}>Jsx</TabButton>
-          <TabButton onSelect={()=>hendleSelect("Props")}>Props</TabButton>
-          <TabButton onSelect={()=>hendleSelect("State")}>States</TabButton>
+          <TabButton isSelected={selectedTopic==="components"} onSelect={()=>hendleSelect('components')}>Componets</TabButton>
+          <TabButton isSelected={selectedTopic==="jsx"} onSelect={()=>hendleSelect("jsx")}>Jsx</TabButton>
+          <TabButton isSelected={selectedTopic==="props"} onSelect={()=>hendleSelect("props")}>Props</TabButton>
+          <TabButton isSelected={selectedTopic==="state"} onSelect={()=>hendleSelect("state")}>States</TabButton>
         </menu>
-        {selectedTopic}
+        {/* {selectedTopic} */}
+        {!selectedTopic ? <p>please select the topic</p>:
+        <div id="tab-content">
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+          <pre>
+            <code>
+            {EXAMPLES[selectedTopic].code}
+            </code>
+          </pre>
+        </div>}
+        
       </section>
+      {/* <section>
+
+      </section> */}
         
     </div>
   </main>
