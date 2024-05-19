@@ -1,12 +1,13 @@
 import Reactimage from "./assets/state-mgmt.png"
-
+import ComponentImg from "./assets/config.png"
+import { CORE_CONCEPTS } from "./data"
 const arrayForDiscription=["hiii","hello","holla"]
-const gentRandomIndex=(max)=>{
+const getRandomIndex=(max)=>{
   return Math.floor(Math.random()*(max+1))
 }
 
 function Header(){
-  let discription =arrayForDiscription[gentRandomIndex(2)]
+  let discription =arrayForDiscription[getRandomIndex(2)]
   return(
     <header>
       <img src={Reactimage} alt="Stylized atom" />
@@ -20,10 +21,28 @@ function Header(){
   )
 }
 
+const CoreConcept=({image,title,description})=>{
+    return(
+      <li>
+        <img src={image} alt="..." />
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </li>
+    )
+}
+
 function App() {
   return (
   <div>
     <Header></Header>
+    <section id="core-concepts">
+      <ul>
+        <CoreConcept {...CORE_CONCEPTS[0]}/>
+        <CoreConcept {...CORE_CONCEPTS[1]}/>
+        <CoreConcept {...CORE_CONCEPTS[2]}/>
+        <CoreConcept {...CORE_CONCEPTS[3]}/>
+      </ul>
+    </section>
     <main>
       <h2>Time to get started!</h2>
     </main>
