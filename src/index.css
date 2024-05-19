@@ -25,13 +25,26 @@ main {
   width: 90%;
   max-width: 50rem;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 #core-concepts {
   padding: 2rem;
   border-radius: 6px;
-  background-color: #140524;
+  background-color: #6812c5;
+  background: rgba(255, 255, 255, 0.2); /* White background with transparency */
+  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.485); /* Subtle shadow for depth */
+  border: 1px solid rgba(129, 125, 125, 0); /* Light border to enhance the glass effect */
+  padding: 20px; /* Padding inside the element */
+  color: white; /* Text color */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 main h2 {
