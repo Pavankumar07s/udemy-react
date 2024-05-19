@@ -5,6 +5,9 @@ import Header from "./components/Header"
 import CoreConcept from "./components/Coreconcept"
 import TabButton from "./components/TabButton";
 function App() {
+  function hendleSelect(){
+    console.log("hii button was selected")
+  }
   return (
     <main>
   <div>
@@ -21,10 +24,10 @@ function App() {
       <section id="examples">
       <h2>Examples</h2>
       <menu>
-          <TabButton>Componets</TabButton>
-          <TabButton>Jsx</TabButton>
-          <TabButton>Props</TabButton>
-          <TabButton>States</TabButton>
+          <TabButton onSelect={hendleSelect}>Componets</TabButton>
+          <TabButton onSelect={hendleSelect}>Jsx</TabButton>
+          <TabButton onSelect={hendleSelect}>Props</TabButton>
+          <TabButton onSelect={hendleSelect}>States</TabButton>
         </menu>
       </section>
         
