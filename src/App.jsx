@@ -1,12 +1,20 @@
+import { useState } from "react";
 import ComponentImg from "./assets/config.png";
 import { CORE_CONCEPTS } from "./data";
 
 import Header from "./components/Header"
 import CoreConcept from "./components/Coreconcept"
 import TabButton from "./components/TabButton";
+
+
 function App() {
-  function hendleSelect(){
-    console.log("hii button was selected")
+  const [selectedTopic,setselectedTopic]=useState("select any button from above");
+  let tabContent="plese select the above button"
+  function hendleSelect(selectedButton){
+    console.log(selectedButton)
+    // tabContent=selectedButton;
+    setselectedTopic(selectedButton)
+    
   }
   return (
     <main>
@@ -24,11 +32,12 @@ function App() {
       <section id="examples">
       <h2>Examples</h2>
       <menu>
-          <TabButton onSelect={hendleSelect}>Componets</TabButton>
-          <TabButton onSelect={hendleSelect}>Jsx</TabButton>
-          <TabButton onSelect={hendleSelect}>Props</TabButton>
-          <TabButton onSelect={hendleSelect}>States</TabButton>
+          <TabButton onSelect={()=>hendleSelect('components')}>Componets</TabButton>
+          <TabButton onSelect={()=>hendleSelect("Jsx")}>Jsx</TabButton>
+          <TabButton onSelect={()=>hendleSelect("Props")}>Props</TabButton>
+          <TabButton onSelect={()=>hendleSelect("State")}>States</TabButton>
         </menu>
+        {selectedTopic}
       </section>
         
     </div>

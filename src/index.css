@@ -41,7 +41,7 @@ main {
   padding: 20px; /* Padding inside the element */
   color: white; /* Text color */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  width: 65%;
+  /* width: 75%; */
   display: flex;
   justify-content: center;
   margin: auto;
