@@ -35,7 +35,7 @@ function App() {
           <TabButton isSelected={selectedTopic==="components"} onSelect={()=>hendleSelect('components')}>Componets</TabButton>
           <TabButton isSelected={selectedTopic==="jsx"} onSelect={()=>hendleSelect("jsx")}>Jsx</TabButton>
           <TabButton isSelected={selectedTopic==="props"} onSelect={()=>hendleSelect("props")}>Props</TabButton>
-          <TabButton isSelected={selectedTopic==="state"} onSelect={()=>hendleSelect("state")}>States</TabButton>
+          <TabButton isSelected={selectedTopic==="state"} onSelect={()=>hendleSelect("state")}>State</TabButton>
         </menu>
         {/* {selectedTopic} */}
         {!selectedTopic ? <p>please select the topic</p>:
