@@ -1,6 +1,5 @@
-
 import Reactimage from "../assets/react-core-concepts.png";
-
+import "./Header.css"
 const arrayForDiscription=["hiii","hello","holla"]
 const getRandomIndex=(max)=>{
   return Math.floor(Math.random()*(max+1))
