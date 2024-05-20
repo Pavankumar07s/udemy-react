@@ -124,9 +124,10 @@ main h2 {
 #tab-content {
   padding: 1rem;
   border-radius: 6px;
-  background-color: #2f1d43;
+  /* background-color: #2f1d43; */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgb(135, 35, 181);
+  border: 1px solid rgb(135, 35, 181);
 }
 
 #tab-content h3 {
