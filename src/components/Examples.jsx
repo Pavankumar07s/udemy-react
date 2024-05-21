@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TabButton from "./TabButton";
 import { EXAMPLES } from "../data";
-
+import Section from "./Section";
 export default function Examples(){
 
     const [selectedTopic,setselectedTopic]=useState();
@@ -13,13 +13,13 @@ export default function Examples(){
     
   }
     return(
-        <section id="examples">
-      <h2>Examples</h2>
+        <Section title ="example" id="examples">
+      {/* <h2>Examples</h2> */}
       <menu>
-          <TabButton isSelected={selectedTopic==="components"} onSelect={()=>hendleSelect('components')}>Componets</TabButton>
-          <TabButton isSelected={selectedTopic==="jsx"} onSelect={()=>hendleSelect("jsx")}>Jsx</TabButton>
-          <TabButton isSelected={selectedTopic==="props"} onSelect={()=>hendleSelect("props")}>Props</TabButton>
-          <TabButton isSelected={selectedTopic==="state"} onSelect={()=>hendleSelect("state")}>State</TabButton>
+          <TabButton isSelected={selectedTopic==="components"} onClick={()=>hendleSelect('components')}>Componets</TabButton>
+          <TabButton isSelected={selectedTopic==="jsx"} onClick={()=>hendleSelect("jsx")}>Jsx</TabButton>
+          <TabButton isSelected={selectedTopic==="props"} onClick={()=>hendleSelect("props")}>Props</TabButton>
+          <TabButton isSelected={selectedTopic==="state"} onClick={()=>hendleSelect("state")}>State</TabButton>
         </menu>
         {/* {selectedTopic} */}
         {!selectedTopic ? <p>please select the topic</p>:
@@ -33,6 +33,6 @@ export default function Examples(){
           </pre>
         </div>}
         
-      </section>
+      </Section>
     )
 }
